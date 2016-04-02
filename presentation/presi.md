@@ -95,3 +95,12 @@ background-image: url(background.png)
 ]
 
 ---
+
+class: middle, center
+background-image: url(background.png)
+
+## aurelia.io
+
+## github.com/aurelia/
+
+## github.com/aurelia/skeleton-navigation/

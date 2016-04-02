@@ -1,0 +1,9 @@
+<template>
+
+  <button click.trigger="gotClicked()">Klick (parameterlos)</button>
+  <button click.delegate="gotClicked($event)">Klick (mit $event)</button>
+
+  <input type="text" value="focus mit trigger" focus.trigger="gotFocus($event)" />
+  <input type="text" value="focus mit delegate" focus.delegate="gotFocus($event)" />
+
+</template>

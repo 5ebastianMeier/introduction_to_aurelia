@@ -1,0 +1,22 @@
+<template>
+
+  <button click.trigger="toggleShowBinding()">show</button>
+  <button click.trigger="toggleIfBinding()">if</button>
+
+  <template show.bind="showActive">
+    <h3>template content with show-binding</h3>
+  </template>
+
+  <div show.bind="showActive">
+    <h3>div content with show-binding</h3>
+  </div>
+
+  <template if.bind="ifActive">
+    <h3>template content with if-binding</h3>
+  </template>
+
+  <div if.bind="ifActive">
+    <h3>div content with if-binding</h3>
+  </div>
+
+</template>
