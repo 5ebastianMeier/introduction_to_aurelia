@@ -101,6 +101,8 @@ background-image: url(background.png)
 
 ## aurelia.io
 
+## gitter.im/aurelia/discuss
+
 ## github.com/aurelia/
 
 ## github.com/aurelia/skeleton-navigation/
