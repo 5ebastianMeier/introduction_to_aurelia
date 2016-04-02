@@ -1,0 +1,81 @@
+<template>
+
+  <h3>color: ${chosenColor}</h3>
+
+  <select value.bind="chosenColor">
+    <option>Select A Color</option>
+    <option repeat.for="color of colors" value.bind="color">${color}</option>
+  </select>
+
+  <label repeat.for="color of colors">
+    <input type="radio" value.bind="color" checked.bind="$parent.chosenColor" />
+    ${color}
+  </label>
+
+
+  <h3>multiple colors:</h3>
+  <h4 repeat.for="color of chosenColors">${color}</h4>
+
+  <select value.two-way="chosenColors" multiple>
+    <option repeat.for="color of colors" value.bind="color">${color}</option>
+  </select>
+
+  <label repeat.for="color of colors">
+    <input type="checkbox" value.bind="color" checked.bind="$parent.chosenColors" />
+    ${color}
+  </label>
+
+
+
+  <h3>car: ${chosenCar.manufacturer} ${chosenCar.model}</h3>
+
+  <select value.bind="chosenCar">
+    <option>Select A Car</option>
+    <option repeat.for="car of cars" model.bind="car">${car.model}</option>
+  </select>
+
+  <label repeat.for="car of cars">
+    <input type="radio" model.bind="car" checked.bind="$parent.chosenCar" />
+    ${car.model}
+  </label>
+
+
+
+  <h3>multiple cars:</h3>
+  <h4 repeat.for="car of chosenCars">${car.manufacturer} ${car.model}</h4>
+
+  <select value.bind="chosenCars" multiple>
+    <option repeat.for="car of cars" model.bind="car">${car.model}</option>
+  </select>
+
+  <label repeat.for="car of cars">
+    <input type="checkbox" model.bind="car" checked.bind="$parent.chosenCars" />
+    ${car.model}
+  </label>
+
+
+
+  <h4 if.bind="likesPizza">Yep Pizza is super!</h4>
+  <h4 if.bind="likesHamburger">Burger sind King!</h4>
+  <h4 if.bind="likesDonuts">Hmmmmmmm... Donuts!</h4>
+
+  <li><label><input type="checkbox" checked.bind="likesPizza" />Pizza</label></li>
+  <li><label><input type="checkbox" checked.bind="likesHamburger" />Hamburger</label></li>
+  <li><label><input type="checkbox" checked.bind="likesDonuts" />Donuts</label></li>
+
+
+
+  <h3>gefällt euch Aurelia?</h3>
+  <h3>${theyLikeIt === null
+      ? 'müsst euch ja nicht gleich entscheiden'
+      : theyLikeIt === undefined
+        ? 'wähl bitte aus'
+        : theyLikeIt
+          ? 'woohoo'
+          : 'menno'}</h3>
+
+  <label><input type="radio" model.bind="null" checked.bind="theyLikeIt" />Weiß noch nich</label>
+  <label><input type="radio" model.bind="true" checked.bind="theyLikeIt" />Jo</label>
+  <label><input type="radio" model.bind="false" checked.bind="theyLikeIt" />Nö</label>
+
+</template>

@@ -1,0 +1,9 @@
+<template>
+  <require from="./replacements/replacable-element"></require>
+
+  <replacable-stuff items.bind="exampleItems">
+    <template replace-part="item-template">
+      <h5>${item}</h5>
+    </template>
+  </replacable-stuff>
+</template>

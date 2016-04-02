@@ -1,0 +1,16 @@
+<template>
+
+  ------------------------
+  <!-- <template repeat.for="item of items">
+      <compose model.bind="item" view-model="modules/${item.type}"></compose>
+  </template> -->
+  ------------------------
+  <!-- <template repeat.for="item of items">
+      <h4>${item.type}</h4>
+      <compose view="./composition/example-view.html"></compose>
+  </template> -->
+  ------------------------
+  <compose view="./../databinding/selections.html" model.bind="items">
+  ------------------------
+
+</template>

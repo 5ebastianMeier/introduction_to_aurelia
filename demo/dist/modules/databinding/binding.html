@@ -1,0 +1,19 @@
+<template>
+  
+  <h3>default (oneWay): ${boundValue}</h3>
+  <h3>oneTime: ${boundValue & oneTime}</h3>
+  <h3>oneWay: ${boundValue & oneWay}</h3>
+
+  <label for="bind">bind (default: one-way)</label>
+  <input name="bind" type="text" value.bind="boundValue">
+
+  <label for="oneWay">oneWay</label>
+  <input name="oneWay" type="text" value.one-way="boundValue">
+
+  <label for="twoWay">twoWay</label>
+  <input name="twoWay" type="text" value.two-way="boundValue">
+
+  <label for="oneTime">oneTime</label>
+  <input name="oneTime" type="text" value.one-time="boundValue">
+
+</template>
